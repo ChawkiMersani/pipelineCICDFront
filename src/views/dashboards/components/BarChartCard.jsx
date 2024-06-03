@@ -23,7 +23,7 @@ const BarChartCard = (props) => {
         const fetchData = async (service, inbound) => {
             const startDateFormatted = `${dates.startDate.getFullYear()}-${dates.startDate.getMonth() + 1}-${dates.startDate.getDate()}`;
             const endDateFormatted = `${dates.endDate.getFullYear()}-${dates.endDate.getMonth() + 1}-${dates.endDate.getDate()}`;
-            const url = `http://springboot-service.default.svc.cluster.local:8080/document/countByServiceTypeAndDate?service=${service}&inbound=${inbound}&startDate=${startDateFormatted}&endDate=${endDateFormatted}`;
+            const url = `http://localhost:62344/document/countByServiceTypeAndDate?service=${service}&inbound=${inbound}&startDate=${startDateFormatted}&endDate=${endDateFormatted}`;
             try {
                 const response = await fetch(url, {
                     method: "GET", headers: {

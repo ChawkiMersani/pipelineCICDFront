@@ -19,7 +19,7 @@ const Navbar = (props) => {
   const user=JSON.parse(getUser());
   useEffect(()=>{
     const fetchdata= async ()=>{
-      const response= await fetch("http://springboot-service.default.svc.cluster.local:8080/error/getAll",{method:"GET",headers:{
+      const response= await fetch("http://localhost:62344/error/getAll",{method:"GET",headers:{
         'Authorization': `Bearer ${token}`
       }});
       const dataJson= await response.json();
@@ -31,7 +31,7 @@ const Navbar = (props) => {
 
     const setSeen= async (id)=>{
       try {
-        const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/error/seen?id="+id, {
+        const response = await fetch("http://localhost:62344/error/seen?id="+id, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

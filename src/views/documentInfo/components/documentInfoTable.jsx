@@ -16,7 +16,7 @@ const DocumentInfoTable = (props) => {
   useEffect(()=>{
     const fetchData = async()=>{
       try{
-        const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/document/get/id="+props.id,{method:"GET",headers:{
+        const response = await fetch("http://localhost:62344/document/get/id="+props.id,{method:"GET",headers:{
           'Authorization': `Bearer ${token}`
         }})
         const newData= await response.json();

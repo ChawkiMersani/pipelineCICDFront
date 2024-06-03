@@ -39,7 +39,7 @@ const ProgressTable = (props) => {
   
   const showError = async (id) => {
     try {
-      const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/error/id=" + id);
+      const response = await fetch("http://localhost:62344/error/id=" + id);
       const data = await response.json();
       data.message.endsWith("NON_RETRYABLE_EXT") ? setContent("Blocked in Queue" + " : " + data.details) : setContent(data.message);
     } catch (error) {

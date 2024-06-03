@@ -3,7 +3,7 @@ import { getToken } from "views/SignIn/Auth";
 export const token = getToken();
 export const fetchAllClaimData = async () => {
   try {
-    const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/claim/getAll?pageNumber="+0+"&pageSize=8",{method:"GET",headers:{
+    const response = await fetch("http://localhost:62344/claim/getAll?pageNumber="+0+"&pageSize=8",{method:"GET",headers:{
       'Authorization': `Bearer ${token}`
     }});
     if (!response.ok) {
@@ -18,7 +18,7 @@ export const fetchAllClaimData = async () => {
 };
 export const fetchAllBillingData = async () => {
   try {
-    const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/GwLinkedObject/getAll?pageNumber="+0+"&pageSize=8",{method:"GET",headers:{
+    const response = await fetch("http://localhost:62344/GwLinkedObject/getAll?pageNumber="+0+"&pageSize=8",{method:"GET",headers:{
       'Authorization': `Bearer ${token}`
     }});
     if (!response.ok) {
@@ -34,7 +34,7 @@ export const fetchAllBillingData = async () => {
 export const fetchAccountData = async (pageNumber,center) => {
     try {
       console.log(center);
-      const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/accounts/getAll?pageNumber="+pageNumber+"&pageSize=100&center="+center,{method:"GET",headers:{
+      const response = await fetch("http://localhost:62344/accounts/getAll?pageNumber="+pageNumber+"&pageSize=100&center="+center,{method:"GET",headers:{
         'Authorization': `Bearer ${token}`
       }});
       if (!response.ok) {
@@ -52,7 +52,7 @@ export const fetchAccountData = async (pageNumber,center) => {
   
   export const fetchSubmissionData = async () => {
     try {
-      const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/submissions/getAll?pageNumber=0&pageSize=100",{method:"GET",headers:{
+      const response = await fetch("http://localhost:62344/submissions/getAll?pageNumber=0&pageSize=100",{method:"GET",headers:{
         'Authorization': `Bearer ${token}`
       }});
       if (!response.ok) {
@@ -68,7 +68,7 @@ export const fetchAccountData = async (pageNumber,center) => {
   
   export const fetchPolicyData = async () => {
     try {
-      const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/policies/getAll?pageNumber=0&pageSize=10",{method:"GET",headers:{
+      const response = await fetch("http://localhost:62344/policies/getAll?pageNumber=0&pageSize=10",{method:"GET",headers:{
         'Authorization': `Bearer ${token}`
       }});
       if (!response.ok) {
@@ -85,7 +85,7 @@ export const fetchAccountData = async (pageNumber,center) => {
   export const fetchDataByGwLinkedObject = async (field) => {
     let arr=[];
     try {
-      const response = await fetch("http://springboot-service.default.svc.cluster.local:8080/GwLinkedObject/get?id="+field,{method:"GET",headers:{
+      const response = await fetch("http://localhost:62344/GwLinkedObject/get?id="+field,{method:"GET",headers:{
         'Authorization': `Bearer ${token}`
       }});
       if (!response.ok) {

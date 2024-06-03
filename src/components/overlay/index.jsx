@@ -8,7 +8,7 @@ const Overlay = (props) => {
     }
    const handleDelete=()=>{
         
-        fetch("http://springboot-service.default.svc.cluster.local:8080/user/deleteUser?id="+props.user,{method:"DELETE",headers: {
+        fetch("http://localhost:62344/user/deleteUser?id="+props.user,{method:"DELETE",headers: {
               'Authorization': `Bearer ${token}`
             },
         });

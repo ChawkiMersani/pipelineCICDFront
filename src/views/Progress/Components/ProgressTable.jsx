@@ -42,7 +42,7 @@ const ProgressTable = (props) => {
   } = tableInstance;
   const showError = async (id) => {
     try{
-      const response= await fetch("http://springboot-service.default.svc.cluster.local:8080/error/id="+id,{method:"GET",headers:{
+      const response= await fetch("http://localhost:62344/error/id="+id,{method:"GET",headers:{
         'Authorization': `Bearer ${token}`
       }});
     const data= await response.json();

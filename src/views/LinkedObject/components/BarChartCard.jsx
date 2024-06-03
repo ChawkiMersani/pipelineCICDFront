@@ -40,32 +40,32 @@ const BarChartCard = (props) => {
       let response;
       switch(category){
         case "policy":
-          response = await fetch(`http://springboot-service.default.svc.cluster.local:8080/document/PoliciescountsByDate/start=${endIso}&end=${startIso}`,{method:"GET",headers:{
+          response = await fetch(`http://localhost:62344/document/PoliciescountsByDate/start=${endIso}&end=${startIso}`,{method:"GET",headers:{
             'Authorization': `Bearer ${token}`
           }});
           break;
         case "claim":
-          response = await fetch(`http://springboot-service.default.svc.cluster.local:8080/document/ClaimsCountsByDate/start=${endIso}&end=${startIso}`,{method:"GET",headers:{
+          response = await fetch(`http://localhost:62344/document/ClaimsCountsByDate/start=${endIso}&end=${startIso}`,{method:"GET",headers:{
             'Authorization': `Bearer ${token}`
           }});
           break;
         case "billing":
-          response = await fetch(`http://springboot-service.default.svc.cluster.local:8080/document/AccountscountsByDate/start=${endIso}&end=${startIso}?center=${props.center}`,{method:"GET",headers:{
+          response = await fetch(`http://localhost:62344/document/AccountscountsByDate/start=${endIso}&end=${startIso}?center=${props.center}`,{method:"GET",headers:{
             'Authorization': `Bearer ${token}`
           }});
           break;
         case "Account":
-          response = await fetch(`http://springboot-service.default.svc.cluster.local:8080/document/AccountscountsByDate/start=${endIso}&end=${startIso}?center=${props.center}`,{method:"GET",headers:{
+          response = await fetch(`http://localhost:62344/document/AccountscountsByDate/start=${endIso}&end=${startIso}?center=${props.center}`,{method:"GET",headers:{
             'Authorization': `Bearer ${token}`
           }});
           break;
         case "Policy":
-          response = await fetch(`http://springboot-service.default.svc.cluster.local:8080/document/PoliciescountsByDate/start=${endIso}&end=${startIso}`,{method:"GET",headers:{
+          response = await fetch(`http://localhost:62344/document/PoliciescountsByDate/start=${endIso}&end=${startIso}`,{method:"GET",headers:{
             'Authorization': `Bearer ${token}`
           }});
           break;
         case "Submission":
-          response = await fetch(`http://springboot-service.default.svc.cluster.local:8080/document/SubbmissionscountsByDate/start=${endIso}&end=${startIso}`,{method:"GET",headers:{
+          response = await fetch(`http://localhost:62344/document/SubbmissionscountsByDate/start=${endIso}&end=${startIso}`,{method:"GET",headers:{
             'Authorization': `Bearer ${token}`
           }});
           break;

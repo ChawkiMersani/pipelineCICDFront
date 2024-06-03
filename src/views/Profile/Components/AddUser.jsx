@@ -32,7 +32,7 @@ const AddUser = () => {
     }
 }
   const saveUser = ()=>{
-    fetch("http://springboot-service.default.svc.cluster.local:8080/user/register",{
+    fetch("http://localhost:62344/user/register",{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
