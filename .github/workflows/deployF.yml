@@ -1,4 +1,4 @@
-name: CI/CD Pipeline Front
+name: CI/CD Pipeline
 
 on:
   push:
@@ -18,9 +18,17 @@ jobs:
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
-        with: 
+        with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
 
       - name: Build and push
         id: docker_build
@@ -28,10 +36,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: chawkimersani/front:latest
-          labels: "chawkimersani/front"
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          tags: chawkimersani/spring-boot-app:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
 
   deploy:
     runs-on: self-hosted
@@ -40,6 +47,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Set up kubectl for Minikube
+        run: |
+          # Ensure Minikube is running
+          minikube status || minikube start
+
+          # Configure kubectl to use Minikube's context
+          kubectl config use-context minikube
 
       - name: Deploy to Kubernetes
         run: kubectl apply -f nodejs.yml
