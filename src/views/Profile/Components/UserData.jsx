@@ -30,7 +30,7 @@ const General = () => {
     setPassword(value);
   };
     const handleUpdate = async ()=>{
-        const response = await fetch("http://localhost:62344/user/updateUser?id="+user.id,{method:"POST", headers: {
+        const response = await fetch("http://localhost:31965/user/updateUser?id="+user.id,{method:"POST", headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
           },

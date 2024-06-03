@@ -12,7 +12,7 @@ export default function SignIn(props) {
 
     const handleSignIn = async ()=>{
         try {
-            await fetch("http://localhost:62344/user/signIn?email="+email+"&password="+password).then(async response =>{
+            await fetch("http://localhost:31965/user/signIn?email="+email+"&password="+password).then(async response =>{
                 if(response.status!=202){
                     setEmail("");
                     setPassword(""); 

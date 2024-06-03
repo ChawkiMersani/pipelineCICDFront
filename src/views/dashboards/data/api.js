@@ -1,6 +1,6 @@
 // src/api/api.js
 export const fetchDocumentCounts = async ({ service, inbound, startDate, endDate }) => {
-  const url = `http://localhost:62344/document/countByServiceTypeAndDate?service=${encodeURIComponent(service)}&inbound=${inbound}&startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+  const url = `http://localhost:31965/document/countByServiceTypeAndDate?service=${encodeURIComponent(service)}&inbound=${inbound}&startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error('Failed to fetch data');

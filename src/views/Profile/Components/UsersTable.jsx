@@ -12,7 +12,7 @@ const UsersTable = () => {
     const token=getToken();
     const [id,setId]=useState();
     const fetchUsers = async ()=>{
-        const data= await fetch("http://localhost:62344/user/getAllUsers",{method:"GET",headers:{
+        const data= await fetch("http://localhost:31965/user/getAllUsers",{method:"GET",headers:{
             'Authorization': `Bearer ${token}`
           }});
         const jsonData= await data.json();

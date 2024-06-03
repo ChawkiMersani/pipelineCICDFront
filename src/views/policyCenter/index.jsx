@@ -14,7 +14,7 @@ function Policy() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:62344/document/getTyped/GW_ID="+id+"?category="+GwLinkedObject+"&inbound="+inbound,{method:"GET",headers:{
+        const response = await fetch("http://localhost:31965/document/getTyped/GW_ID="+id+"?category="+GwLinkedObject+"&inbound="+inbound,{method:"GET",headers:{
           'Authorization': `Bearer ${token}`
         }});
         console.error(response);

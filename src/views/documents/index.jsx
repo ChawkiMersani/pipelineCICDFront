@@ -41,7 +41,7 @@ const Documents = () => {
       const end=new Date(dates[1]);
       const endIso = end.toISOString().substring(0, 10) + ' ' + end.toISOString().substring(11, 23);
       try {
-        const response = await fetch("http://localhost:62344/document/get/Numbers/start="+startIso+"&end="+endIso,{method:"GET",headers:{
+        const response = await fetch("http://localhost:31965/document/get/Numbers/start="+startIso+"&end="+endIso,{method:"GET",headers:{
           'Authorization': `Bearer ${token}`
         }});
         if (!response.ok) {
@@ -90,7 +90,7 @@ const Documents = () => {
       if(center=="All centers"){
         if(field=="Filter By Id/Object..."){
           try {
-            const response = await fetch("http://localhost:62344/document/getAll/pageNumber="+pageNumber+"&pageSize=10",{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getAll/pageNumber="+pageNumber+"&pageSize=10",{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -111,7 +111,7 @@ const Documents = () => {
             }
         }else if(field.startsWith("pc") || field.startsWith("cc") || field.startsWith("bc")){
           try {
-            const response = await fetch("http://localhost:62344/document/get/id="+field,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/id="+field,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -124,7 +124,7 @@ const Documents = () => {
             }
         }else{
           try {
-            const response = await fetch("http://localhost:62344/document/get/GW_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/GW_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -145,7 +145,7 @@ const Documents = () => {
       }else{
         if(field=="Filter By Id/Object..."){
           try {
-            const response = await fetch("http://localhost:62344/document/get/service="+center+"?pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/service="+center+"?pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -163,7 +163,7 @@ const Documents = () => {
             }
         }else if(field.startsWith("pc") || field.startsWith("cc") || field.startsWith("bc")){
           try {
-            const response = await fetch("http://localhost:62344/document/get/GW_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/GW_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -176,7 +176,7 @@ const Documents = () => {
             }
         }else{
           try {
-            const response = await fetch("http://localhost:62344/document/get/service="+center+"/Gw_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/service="+center+"/Gw_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -200,7 +200,7 @@ const Documents = () => {
       if(center=="All centers"){
         if(field=="Filter By Id/Object..."){
           try {
-            const response = await fetch("http://localhost:62344/document/get/status="+status+"?pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/status="+status+"?pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -219,7 +219,7 @@ const Documents = () => {
             }
         }else if(field.startsWith("pc") || field.startsWith("cc") || field.startsWith("bc")){
           try {
-            const response = await fetch("http://localhost:62344/document/get/GW_ID="+field,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/GW_ID="+field,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -233,7 +233,7 @@ const Documents = () => {
             }
         }else{
           try {
-            const response = await fetch("http://localhost:62344/document/get/status="+status+"/Gw_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/status="+status+"/Gw_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -254,7 +254,7 @@ const Documents = () => {
       }else{
         if(field=="Filter By Id/Object..."){
           try {
-            const response = await fetch("http://localhost:62344/document/get/status="+status+"/service="+center+"?pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/status="+status+"/service="+center+"?pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -272,7 +272,7 @@ const Documents = () => {
             }
         }else if(field.startsWith("pc") || field.startsWith("cc") || field.startsWith("bc")){
           try {
-            const response = await fetch("http://localhost:62344/document/get/GW_ID="+field,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/GW_ID="+field,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -286,7 +286,7 @@ const Documents = () => {
             }
         }else{
           try {
-            const response = await fetch("http://localhost:62344/document/get/status="+status+"/service="+center+"/Gw_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/get/status="+status+"/service="+center+"/Gw_ID="+field+"?pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -336,7 +336,7 @@ const Documents = () => {
     const end=new Date(dates[1]);
     const endIso = end.toISOString().substring(0, 10) + ' ' + end.toISOString().substring(11, 23);
     try {
-      const response = await fetch("http://localhost:62344/document/get/Numbers/start="+startIso+"&end="+endIso,{method:"GET",headers:{
+      const response = await fetch("http://localhost:31965/document/get/Numbers/start="+startIso+"&end="+endIso,{method:"GET",headers:{
         'Authorization': `Bearer ${token}`
       }});
       if (!response.ok) {
@@ -372,7 +372,7 @@ const Documents = () => {
   //MessageQueues Status function
 
   async function messageQueuesStatus(){
-    const docProdReqResponse = await fetch("http://localhost:62344/messagesqueues/getDocProdStatus",{method:"GET",headers:{
+    const docProdReqResponse = await fetch("http://localhost:31965/messagesqueues/getDocProdStatus",{method:"GET",headers:{
       'Authorization': `Bearer ${token}`
     }});
     const docProdReqString = await docProdReqResponse.text();
@@ -382,7 +382,7 @@ const Documents = () => {
     }else{
       setDocProdRes([true,docProdReqduration])
     }
-    const rmsResponse = await fetch("http://localhost:62344/messagesqueues/getRmsStatus",{method:"GET",headers:{
+    const rmsResponse = await fetch("http://localhost:31965/messagesqueues/getRmsStatus",{method:"GET",headers:{
       'Authorization': `Bearer ${token}`
     }});
     const rmsString = await rmsResponse.text();
@@ -392,7 +392,7 @@ const Documents = () => {
     }else{
       setRms([true,rmsduration]);
     }
-    const eSigntureResponse = await fetch("http://localhost:62344/messagesqueues/getEsignatureStatus",{method:"GET",headers:{
+    const eSigntureResponse = await fetch("http://localhost:31965/messagesqueues/getEsignatureStatus",{method:"GET",headers:{
       'Authorization': `Bearer ${token}`
     }});
     const eSigntureString = await eSigntureResponse.text();

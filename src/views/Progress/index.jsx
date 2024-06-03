@@ -32,7 +32,7 @@ function Progress(){
       if(center=="All centers"){
         if(field=="Filter By Id/Object..."){
           try {
-            const response = await fetch("http://localhost:62344/document/getAllTyped/pageNumber="+pageNumber+"&pageSize=15?inbound="+inbound,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getAllTyped/pageNumber="+pageNumber+"&pageSize=15?inbound="+inbound,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -50,7 +50,7 @@ function Progress(){
             }
         }else if(field.startsWith("pc") || field.startsWith("cc") || field.startsWith("bc")){
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/id="+field+"?inbound="+inbound,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/id="+field+"?inbound="+inbound,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -64,7 +64,7 @@ function Progress(){
             }
         }else{
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/GW_ID="+field+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/GW_ID="+field+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -85,7 +85,7 @@ function Progress(){
       }else{
         if(field=="Filter By Id/Object..."){
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/service="+center+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/service="+center+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -103,7 +103,7 @@ function Progress(){
             }
         }else if(field.startsWith("pc") || field.startsWith("cc") || field.startsWith("bc")){
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/id="+field+"?inbound="+inbound,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/id="+field+"?inbound="+inbound,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -117,7 +117,7 @@ function Progress(){
             }
         }else{
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/service="+center+"/Gw_ID="+field+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/service="+center+"/Gw_ID="+field+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -141,7 +141,7 @@ function Progress(){
       if(center=="All centers"){
         if(field=="Filter By Id/Object..."){
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/status="+status+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/status="+status+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -160,7 +160,7 @@ function Progress(){
             }
         }else if(field.startsWith("pc") || field.startsWith("cc") || field.startsWith("bc")){
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/id="+field+"?inbound="+inbound,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/id="+field+"?inbound="+inbound,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -174,7 +174,7 @@ function Progress(){
             }
         }else{
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/status="+status+"/Gw_ID="+field+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/status="+status+"/Gw_ID="+field+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -195,7 +195,7 @@ function Progress(){
       }else{
         if(field=="Filter By Id/Object..."){
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/status="+status+"/service="+center+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/status="+status+"/service="+center+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -214,7 +214,7 @@ function Progress(){
             }
         }else if(field.startsWith("pc") || field.startsWith("cc") || field.startsWith("bc")){
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/id="+field+"?inbound="+inbound,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/id="+field+"?inbound="+inbound,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {
@@ -228,7 +228,7 @@ function Progress(){
             }
         }else{
           try {
-            const response = await fetch("http://localhost:62344/document/getTyped/status="+status+"/service="+center+"/Gw_ID="+field+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
+            const response = await fetch("http://localhost:31965/document/getTyped/status="+status+"/service="+center+"/Gw_ID="+field+"?inbound="+inbound+"&pageNumber="+pageNumber,{method:"GET",headers:{
               'Authorization': `Bearer ${token}`
             }});
               if (!response.ok) {

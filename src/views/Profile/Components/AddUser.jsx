@@ -32,7 +32,7 @@ const AddUser = () => {
     }
 }
   const saveUser = ()=>{
-    fetch("http://localhost:62344/user/register",{
+    fetch("http://localhost:31965/user/register",{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
