@@ -29,6 +29,9 @@ jobs:
           context: .
           push: true
           tags: chawkimersani/front:latest
+          labels: "chawkimersani/front"
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   deploy:
     runs-on: self-hosted
