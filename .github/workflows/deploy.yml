@@ -41,10 +41,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up kubectl for Minikube
-        run: |
-          minikube status || minikube start
-          kubectl config use-context minikube
+
 
       - name: Deploy to Kubernetes
         run: kubectl apply -f nodejs.yml
