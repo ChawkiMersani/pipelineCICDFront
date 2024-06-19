@@ -1,8 +1,7 @@
 # PipelineCICDFront
 
-This repository contains the front-end code and configurations for a Continuous Integration and Continuous Deployment (CI/CD) pipeline project.
+This repository contains the front-end code and configurations for a Continuous Integration and Continuous Deployment (CI/CD) pipeline project Frontend ReactJS .
 
-![CI/CD Frontend](./public/images/frontend.png)
 
 ## Table of Contents
 
